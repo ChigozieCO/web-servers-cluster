@@ -1,6 +1,6 @@
 ## Deploying a cluster of web servers
 
-This is an improvement of the single web server architecture.
+This is an improvement of the [single web server architecture.](https://github.com/TheGozie/single-web-server)
 
 We are making some changes to the code and adding more servers to make the infrastructure more resilent.
 
