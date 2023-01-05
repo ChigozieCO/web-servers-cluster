@@ -13,3 +13,7 @@ A single server is a single point of failure. If that server crashes, or if it b
 We would configure Auto Scaling Group (ASG) to manage the cluster of web servers. An ASG takes care of a lot of tasks for you completely automatically, including launching a cluster of EC2 Instances, monitoring the health of each Instance, replacing failed Instances, and adjusting the size of the cluster in response to load.
 
 I have decided to use a launch configuration here instead of the AWS best practice to use a launch template because it's easier to use in some conceptrs of zero-doewntime deployment. 
+
+We would also deploy a load balancer to distribute traffic across our servers and to give all your users the IP (actually, the DNS name) of the load balancer.
+
+To keep this example simple, the EC2 Instances and ALB are running in the same subnets. In production usage, you’d most likely run them in different subnets, with the EC2 Instances in private subnets (so they aren’t directly accessible from the public internet) and the ALBs in public subnets (so users can access them directly).
